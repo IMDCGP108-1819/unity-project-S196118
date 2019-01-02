@@ -5,9 +5,9 @@ public class PlayerControl : MonoBehaviour {
 
     // Jump control
     public Rigidbody2D rb;
-    public float JumpForce = 3.5f;
+    public float JumpForce = 5.0f;
 
-    public float MaxSpeed = 5.0f;
+    public float MaxSpeed = 8.0f;
 
     // Player Movement
     void Update()
@@ -36,6 +36,20 @@ public class PlayerControl : MonoBehaviour {
             transform.position = new Vector3(-8.3f, transform.position.y);
         }
     }
+    // Screen Binding - Top
+    private void LateUpdate()
+    {
+        float currentY = transform.position.Y;
+
+        if (currentY < 9.0f)
+        {
+            transform.position = new Vector3(-9.0f, transform.position.y);
+        }
+    }
+
+
 }
 
- 
+
+
+
