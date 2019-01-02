@@ -3,9 +3,9 @@
 public class PlayerControl : MonoBehaviour {
     private int score;
 
-    // jump control
+    // Jump control
     public Rigidbody2D rb;
-    public float JumpForce = 5.0f;
+    public float JumpForce = 3.5f;
 
     public float MaxSpeed = 5.0f;
 

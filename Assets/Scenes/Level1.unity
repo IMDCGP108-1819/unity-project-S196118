@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 148972356}
-  JumpForce: 5
-  MaxSpeed: 10
+  JumpForce: 3.5
+  MaxSpeed: 5
 --- !u!212 &148972354
 SpriteRenderer:
   m_ObjectHideFlags: 0
