@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class PlayerControl : MonoBehaviour {
+public class PlayerControl : MonoBehaviour
+{
     private int score;
 
     // Jump control
@@ -11,7 +12,7 @@ public class PlayerControl : MonoBehaviour {
 
     // Player Movement
     void Update()
-    {   
+    {
         float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
         //float vertical = Input.GetAxis("Vertical") * Time.deltaTime;
 
@@ -26,30 +27,21 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
-    // Screen Binding - Left-hand side
+    // Screen Binding - Left and Top
     private void LateUpdate()
     {
-        float currentX = transform.position.x;
+        float currentx = transform.position.x;
+        float currenty = transform.position.y;
 
-        if ( currentX < -8.3f)
+        if (currentx < -8.3f)
         {
-            transform.position = new Vector3(-8.3f, transform.position.y);
+            transform.position = new Vector3(-8.3f, transform.position.x);
+        }
+        if (currenty > 8.0f)
+        {
+            transform.position = new Vector3( 8.0f, transform.position.y);
         }
     }
-    // Screen Binding - Top
-    private void LateUpdate()
-    {
-        float currentY = transform.position.Y;
-
-        if (currentY < 9.0f)
-        {
-            transform.position = new Vector3(-9.0f, transform.position.y);
-        }
-    }
-
-
 }
-
-
-
+   
 
