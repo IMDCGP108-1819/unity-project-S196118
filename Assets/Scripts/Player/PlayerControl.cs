@@ -26,12 +26,8 @@ public class PlayerControl : MonoBehaviour
     public float JumpForce = 5.0f;
     public float MaxSpeed = 8.0f;
 
-    // Jump Limiter
-    private float MaxJumpDist = 9.0f;
-    public float JumpDist = position.y;
-   
-    if (currenty = < 9.0f)
-        transform.position = new Vector3(9.0f, Transform.position.y);
+    // double jump limit 
+
 
     // Screen Binding - Left
     private void LateUpdate()
