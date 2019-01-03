@@ -4,12 +4,6 @@ public class PlayerControl : MonoBehaviour
 {
     private int score;
 
-    // Jump control
-    public Rigidbody2D rb;
-    public float JumpForce = 5.0f;
-
-    public float MaxSpeed = 8.0f;
-
     // Player Movement
     void Update()
     {
@@ -19,6 +13,7 @@ public class PlayerControl : MonoBehaviour
         transform.position = new Vector3(transform.position.x + horizontal * MaxSpeed, transform.position.y);
     }
 
+    // Jump function
     void FixedUpdate()
     {
         if (Input.GetButtonDown("Jump"))
@@ -26,22 +21,38 @@ public class PlayerControl : MonoBehaviour
             rb.AddForce(new Vector2(0.0f, JumpForce), ForceMode2D.Impulse);
         }
     }
+    // Jump control
+    public Rigidbody2D rb;
+    public float JumpForce = 5.0f;
 
-    // Screen Binding - Left and Top
+    public float MaxSpeed = 8.0f;
+
+    // Jump Limiter
+     
+    private float MaxJumpDist = 9.0f;
+    public float JumpDist = position.y
+   
+    if (currenty = < 9.0f)
+        transform.position = new Vector3(9.0f, Transform.position.y);
+
+
+
+    // Screen Binding - Left
     private void LateUpdate()
     {
         float currentx = transform.position.x;
-        float currenty = transform.position.y;
 
         if (currentx < -8.3f)
         {
             transform.position = new Vector3(-8.3f, transform.position.x);
         }
-        if (currenty > 8.0f)
+
+
+
+        // Shooting function
         {
-            transform.position = new Vector3( 8.0f, transform.position.y);
+
         }
     }
-}
-   
 
+}
