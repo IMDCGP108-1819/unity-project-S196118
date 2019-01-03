@@ -26,6 +26,20 @@ public class PlayerControl : MonoBehaviour
     public float JumpForce = 5.0f;
     public float MaxSpeed = 8.0f;
 
+    // flip Character - depending on direction
+
+    private bool facingright = true;
+        
+        
+        
+        void flip()
+    {
+        facingright = !facingright;
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
+    }
+        
     // double jump limit 
 
 
