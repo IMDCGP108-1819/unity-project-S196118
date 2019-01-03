@@ -30,8 +30,12 @@ public class PlayerControl : MonoBehaviour
 
     private bool facingright = true;
         
-        
-        
+        if(facingright == false && moveinput > 0)
+        {
+         flip();
+        } else if(facingright == true && moveinput < 0){
+            flip();
+}
         void flip()
     {
         facingright = !facingright;
@@ -40,8 +44,13 @@ public class PlayerControl : MonoBehaviour
         transform.localScale = scaler;
     }
         
-    // double jump limit 
-
+    // Jump limit 
+    
+   if (currenty< 8.0f)
+    
+        {
+            transform.position = new Vector3(transform.position.x, 8.0f);
+        }
 
     // Screen Binding - Left
     private void LateUpdate()
