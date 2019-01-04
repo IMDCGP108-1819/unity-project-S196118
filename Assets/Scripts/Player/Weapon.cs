@@ -5,8 +5,9 @@ using UnityEngine;
 public class Weapon : MonoBehaviour {
 
     public Transform firepoint;
-
-	// Update is called once per frame
+    public GameObject laserBeam;
+	
+    // Update is called once per frame
     // Shooting Mouse 1
 	void Update () {
         if (Input.GetButtonDown("Fire1"))
@@ -17,6 +18,6 @@ public class Weapon : MonoBehaviour {
     //Shooting function
     void Shoot ()
     {
-
+        Instantiate(laserBeam, firepoint.position, firepoint.rotation);
     }
 }

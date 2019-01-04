@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 2105948027}
+  laserBeam: {fileID: 1850068133188460, guid: a1581b29f2876b543b315af857e2c626, type: 2}
 --- !u!1 &523257467
 GameObject:
   m_ObjectHideFlags: 0
