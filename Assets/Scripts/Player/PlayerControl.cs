@@ -8,10 +8,11 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
-       
         transform.position = new Vector3(transform.position.x + horizontal * MaxSpeed, transform.position.y);
-  
     }
+    
+    // player rotation - based off of movement input
+
 
     // Jump control
     public Rigidbody2D rb;
