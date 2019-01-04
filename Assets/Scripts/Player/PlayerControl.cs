@@ -26,11 +26,43 @@ public class PlayerControl : MonoBehaviour
     public float JumpForce = 5.0f;
     public float MaxSpeed = 8.0f;
 
+
+
     // flip Character - depending on direction
 
-   
-        
+    private bool FacingRight;
+    private bool FacingLeft;
+    private void Flip()
+
+    {
+        { FacingRight = Input.GetButtonDown("right");
+
+         if Input.GetButtonDown("right") = true)
+
+                (transform.Rotate(0f, 180f, 0f)
+
+         if Input.GetButtonDown("right") = false)
+
+                (transform.Rotate(0f, 0f, 0f);
+        }
+        { FacingLeft = Input.GetButtonDown("Left");
+
+         if Input.GetButtonDown("Left") = true)
+
+                (transform.Rotate(0f, 180f, 0f)
+
+         if Input.GetButtonDown("Left") = false)
+
+                (transform.Rotate(0f, 0f, 0f);
+
+        }
+    }
     
+
+
+
+
+
 
     // Screen Binding - Left and jump limit
     private void LateUpdate()
@@ -42,10 +74,9 @@ public class PlayerControl : MonoBehaviour
             transform.position = new Vector3(-8.3f, transform.position.x);
         }
 
-        // Shooting function - upon item pick up
+        // Shooting function - Prefab
         {
 
         }
     }
-
 }
