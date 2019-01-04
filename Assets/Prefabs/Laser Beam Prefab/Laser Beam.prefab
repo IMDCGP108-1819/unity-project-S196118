@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4647087082948350}
   - component: {fileID: 212724767173830166}
   - component: {fileID: 50135241497298040}
-  - component: {fileID: 8195094281793396812}
   - component: {fileID: 61671312797080802}
+  - component: {fileID: 114332740013189952}
   m_Layer: 0
   m_Name: Laser Beam
   m_TagString: Untagged
@@ -88,6 +88,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.8969555, y: 1.6886985}
   m_EdgeRadius: 0
+--- !u!114 &114332740013189952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1850068133188460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18595c5fd1749a4ba3f4e83f47ca8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+  rb: {fileID: 50135241497298040}
 --- !u!212 &212724767173830166
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -134,39 +147,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1839735485 &8195094281793396812
-Tilemap:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1850068133188460}
-  m_Enabled: 1
-  m_Tiles: {}
-  m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
-  m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
-  m_TileOrientation: 0
-  m_TileOrientationMatrix:
-    e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1
