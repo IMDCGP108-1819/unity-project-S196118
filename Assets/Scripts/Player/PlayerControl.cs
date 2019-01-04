@@ -37,10 +37,5 @@ public class PlayerControl : MonoBehaviour
         {
             transform.position = new Vector3(-8.3f, transform.position.x);
         }
-
-        // Shooting function - Prefab
-        {
-
-        }
     }
 }
