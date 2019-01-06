@@ -28,14 +28,22 @@ public class PlayerControl : MonoBehaviour
         }
     }
   
-    // Screen Binding - Left and jump limit
+    // Screen Binding - Left and Right
     private void LateUpdate()
     {
         float currentx = transform.position.x;
-
+        float currenty = transform.position.y;
+        
+        // Left
         if (currentx < -8.3f)
         {
             transform.position = new Vector3(-8.3f, transform.position.x);
+        }
+
+        //Right
+        if (currentx > 468.0f)
+        {
+            transform.position = new Vector3(468.0f, transform.position.x);
         }
     }
 }
