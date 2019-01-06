@@ -15,7 +15,7 @@ TagManager:
   - 
   - player
   - background
-  - 
+  - Platform
   - 
   - 
   - 
@@ -46,4 +46,10 @@ TagManager:
     locked: 0
   - name: Menu Button
     uniqueID: 2336843211
+    locked: 0
+  - name: Player and enemy
+    uniqueID: 1556713145
+    locked: 0
+  - name: Platforms
+    uniqueID: 1029047283
     locked: 0
