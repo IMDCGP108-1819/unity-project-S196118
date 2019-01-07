@@ -37,13 +37,21 @@ public class PlayerControl : MonoBehaviour
         // Left
         if (currentx < -8.3f)
         {
-            transform.position = new Vector3(-8.3f, transform.position.x);
+            transform.position = new Vector3(-8.3f, currenty);
         }
 
         //Right
-        if (currentx > 468.0f)
+        if (currentx > 464.0f)
         {
-            transform.position = new Vector3(468.0f, transform.position.x);
+            transform.position = new Vector3(464.0f, currenty);
         }
+
+        //Top
+        if (currenty > 57.0f)
+        {
+            transform.position = new Vector3(currentx, 57.0f);
+        }
+       
+    
     }
 }
