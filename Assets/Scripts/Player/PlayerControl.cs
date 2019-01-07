@@ -3,17 +3,39 @@
 public class PlayerControl : MonoBehaviour
 {
     private int score;
+    private bool isFacingRight = true;
+    private float MovementDirection;
 
     // Player Movement
+
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
         transform.position = new Vector3(transform.position.x + horizontal * MaxSpeed, transform.position.y);
+
+        // Movement Direction
+
+        MovementDirection = Input.GetAxisRaw("Horizontal");
+        
+        // Flip
+
+        if(isFacingRight && MovementDirection > 0)
+        {
+            Flip();
+        }else if (!isFacingRight && MovementDirection < 0)
+        {
+            Flip();
+        }
+
     }
-    
-    // player rotation - based off of movement input
 
-
+    // Flip function
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0.0f, 180f, 0f);
+    }
+   
     // Jump control
     public Rigidbody2D rb;
     public float JumpForce = 5.0f;
