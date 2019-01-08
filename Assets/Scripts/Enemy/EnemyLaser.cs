@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyLaser : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public float speed = 40f;
+    public Rigidbody2D rb;
+
+    // Laser Velocity
+    void Start()
+    {
+        rb.velocity = transform.right * -speed;
+    }
 }
