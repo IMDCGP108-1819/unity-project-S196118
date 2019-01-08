@@ -601,6 +601,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 31
       objectReference: {fileID: 0}
+    - target: {fileID: 1520042471832508, guid: 5071bdaed648bc248887d39b6fe6258b, type: 2}
+      propertyPath: m_Name
+      value: O2 Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5071bdaed648bc248887d39b6fe6258b, type: 2}
   m_IsPrefabAsset: 0
@@ -772,7 +776,7 @@ GameObject:
   - component: {fileID: 466052182}
   - component: {fileID: 466052181}
   m_Layer: 0
-  m_Name: Health Icon1
+  m_Name: Health Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
