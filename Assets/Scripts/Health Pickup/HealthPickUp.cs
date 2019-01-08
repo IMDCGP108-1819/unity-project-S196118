@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyLaser : MonoBehaviour {
+public class HealthPickUp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

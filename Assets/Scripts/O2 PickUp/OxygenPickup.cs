@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OxygenMechanic : MonoBehaviour {
+public class OxygenPickup : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

@@ -73,4 +73,5 @@ public class PlayerControl : MonoBehaviour
             transform.position = new Vector3(currentx, 57.0f);
         }
     }
+    
 }

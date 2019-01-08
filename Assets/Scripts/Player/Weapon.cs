@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour {
-
+public class Weapon : MonoBehaviour
+{
     public Transform firepoint;
     public GameObject laserBeam;
 	
-    // Update is called once per frame
     // Shooting Mouse 1
-	void Update () {
+	void Update ()
+    {
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
