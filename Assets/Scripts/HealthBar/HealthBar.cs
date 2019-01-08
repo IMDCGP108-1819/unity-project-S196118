@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class HealthBar : MonoBehaviour {
+public class HealthBar : MonoBehaviour
+
+{
 
     Image healthBar;
     float MaxHealth = 100f;
@@ -16,7 +19,14 @@ public class HealthBar : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         healthBar.fillAmount = Health / MaxHealth;
+
+        if (healthBar.fillAmount == 0f)
+        {
+            SceneManager.LoadScene("Gameover");
+        }
+
 	}
 }
