@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LaserBeamController : MonoBehaviour
 {
-    public EnemyController script;
     public float speed = 40f;
     public Rigidbody2D rb;
     public int Damage = 100;
@@ -16,14 +15,14 @@ public class LaserBeamController : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
-   public void OnTriggerEnter2D (Collider2D HitInfo)
-   {
-      EnemyController enemy = HitInfo.GetComponent<EnemyController>();
+    void OnTriggerEnter2D(Collider2D hitinfo)
+    {
+        Enemy enemy = hitinfo.GetComponent<Enemy>();
         if (enemy != null)
         {
-            //EnemyController.TakeDamage(Damage);
+            enemy.TakeDamage(Damage);
         }
         Destroy(gameObject);
     }
-   
+    
 }   
