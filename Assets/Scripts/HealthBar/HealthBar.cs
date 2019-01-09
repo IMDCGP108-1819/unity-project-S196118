@@ -25,7 +25,7 @@ public class HealthBar : MonoBehaviour
 
         if (healthBar.fillAmount == 0f)
         {
-            SceneManager.LoadScene("Gameover");
+            SceneManager.LoadScene("Game Over Screen");
         }
 
 	}
