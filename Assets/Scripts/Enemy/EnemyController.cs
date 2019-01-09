@@ -4,18 +4,41 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    // Enemy patroll (movement)
 
-    // Use this for initialization
-    void Start()
+
+
+
+
+
+    // Enemy health
+    public int Health = 100;
+    public void TakeDamage (int Damage)
     {
+        Health -= Damage;
 
+        if (Health <= 0)
+        {
+            Death();
+        }
     }
 
-    // Enemy Damage to player
-
-    void OnTriggerEnter2D(Collider2D collision)
+    void Death()
     {
-        HealthBar.Health -= 10f;
+        Destroy(gameObject); 
     }
+    
+    // If player hits enemy - player lose 10 HP
+
+    void OnTriggerEnter2D(Collider2D collider2D)
+    {
+        Damage();
+    }
+
+    void Damage()
+    {
+       HealthBar.Health -= 10f;
+    }
+
 }
 

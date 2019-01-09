@@ -47,6 +47,7 @@ public class PlayerControl : MonoBehaviour
         {
             rb.AddForce(new Vector2(0.0f, JumpForce), ForceMode2D.Impulse);
         }
+
     }
     
     // Screen Binding - Left and Right
@@ -73,5 +74,4 @@ public class PlayerControl : MonoBehaviour
             transform.position = new Vector3(currentx, 57.0f);
         }
     }
-    
 }
