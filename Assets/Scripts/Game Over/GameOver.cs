@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
+
 {
     public void Reload()
     {
@@ -12,6 +13,7 @@ public class GameOver : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Menu");
     }
 }
+
