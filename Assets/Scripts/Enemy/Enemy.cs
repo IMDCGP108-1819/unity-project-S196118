@@ -9,14 +9,13 @@ public class Enemy : MonoBehaviour {
 
 
 
-    // If the enem collides with the player then player losses health
-    void OnCollisionEnter2D(Collision2D collision)
+    // If the enemy collides with the player then player losses health
+    void OnCollisionEnter2D(Collision2D col)
     {
-        PlayerControl player = collision.collider.GetComponent<PlayerControl>();
-        if (player != null)
+     if (col.gameObject.tag.Equals("Player"))
         {
             HealthBar.Health -= 10f;
-        }
+        }  
     }
 
     // Enemy damage
