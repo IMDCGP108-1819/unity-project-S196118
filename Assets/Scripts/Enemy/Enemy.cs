@@ -4,9 +4,53 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
+    // Enemy Patrol 
 
+    public float moveSpeed = 5f;
+    Transform LeftWaypoint, RightWaypoint;
+    Vector3 LocalScale;
+    bool MovingRight = true;
+    Rigidbody2D rb;
 
+    void Start()
+    {
+        LocalScale = transform.localScale;
+        rb = GetComponent<Rigidbody2D>();
+        LeftWaypoint = GameObject.Find ("LeftWaypoint").GetComponent<Transform>();
+        RightWaypoint = GameObject.Find("RightWaypoint").GetComponent<Transform>();
+    }
 
+    void Update()
+    {
+        if (transform.position.x > RightWaypoint.position.x)
+            MovingRight = false;
+
+        if (transform.position.x < LeftWaypoint.position.x)
+            MovingRight = true;
+
+        if (MovingRight)
+            MoveRight();
+        else
+            MoveLeft();
+    }
+
+    void MoveRight()
+    {
+        MovingRight = true;
+        LocalScale.x = 1;
+        transform.localScale = LocalScale;
+        rb.velocity = new Vector2 (LocalScale.x * moveSpeed, rb.velocity.y);
+
+    }
+
+    void MoveLeft()
+    {
+        MovingRight = false;
+        LocalScale.x = -1;
+        transform.localScale = LocalScale;
+        rb.velocity = new Vector2(LocalScale.x * moveSpeed, rb.velocity.y);
+
+    }
 
 
     // If the enemy collides with the player then player losses health
