@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-
+    // Camera follows player
     public GameObject player;
 
     void LateUpdate()

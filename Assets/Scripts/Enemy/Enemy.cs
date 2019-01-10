@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour {
         LeftWaypoint = GameObject.Find ("LeftWaypoint").GetComponent<Transform>();
         RightWaypoint = GameObject.Find("RightWaypoint").GetComponent<Transform>();
     }
-
+    // move function
     void Update()
     {
         if (transform.position.x > RightWaypoint.position.x)
@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour {
         else
             MoveLeft();
     }
-
+    // Right move point
     void MoveRight()
     {
         MovingRight = true;
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour {
         rb.velocity = new Vector2 (LocalScale.x * moveSpeed, rb.velocity.y);
 
     }
-
+    // Left move point
     void MoveLeft()
     {
         MovingRight = false;
@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour {
             Die();
         }
     }
-
+    // Death
     void Die()
     {
         Destroy(gameObject);
