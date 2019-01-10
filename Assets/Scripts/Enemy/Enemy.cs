@@ -10,9 +10,9 @@ public class Enemy : MonoBehaviour {
 
 
     // If the enemy collides with the player then player losses health
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D hit)
     {
-     if (col.gameObject.tag.Equals("Player"))
+     if (hit.gameObject.tag.Equals("Player"))
         {
             HealthBar.Health -= 10f;
         }  
