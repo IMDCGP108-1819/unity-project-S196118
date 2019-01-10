@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
         Health = MaxHealth;
 	}
 	
-	// Update is called once per frame
+	// If healthbar is empty load game over
 	void Update ()
     {
         healthBar.fillAmount = Health / MaxHealth;
